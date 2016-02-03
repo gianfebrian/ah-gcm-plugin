@@ -1,5 +1,5 @@
 var chai = require('chai'),
-  should = chai.should(),
+  expect = chai.expect,
   factories = require('chai-factories'),
   should = require("should"),
   setup = require("./../_setup.js")._setup;
@@ -14,11 +14,11 @@ describe('unit', function() {
 
   describe('messaging', function() {
     it('gcm.build', function() {
-      setup.api.gcm.build().should.be.an('object');
+      expect(setup.api.gcm.build()).to.be.an('object');
     });
 
     it('gcm.generateMessageData', function() {
-      setup.api.gcm.generateMessageData(chai.create('gcmPayload').message).should.be.an('object');
+      expect(setup.api.gcm.generateMessageData(chai.create('gcmPayload').message)).to.be.an('object');
     });
   });
 });
