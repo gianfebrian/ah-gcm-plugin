@@ -18,6 +18,6 @@ exports.action = {
   },
 
   run: function(api, data, next) {
-    api.gcm.token.findOneOrRegister(params, next);
+    api.gcm.token.findOneOrRegister(data.params, next);
   }
 };
