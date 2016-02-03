@@ -13,14 +13,17 @@ describe('integration', function() {
     setup.init(done);
   });
 
-  it('api/registerGCMToken', function(done) {
-    request.post(setup.testUrl + '/registerGCMToken', {
-      form: chai.create('gcmToken')
-    }, function(err, response, body) {
-      body = JSON.parse(body);
-      expect(body.error).to.be.undefined;
-      done();
+  describe('action', function() {
+    it('api/registerGCMToken', function(done) {
+      request.post(setup.testUrl + '/registerGCMToken', {
+        form: chai.create('gcmToken')
+      }, function(err, response, body) {
+        body = JSON.parse(body);
+        expect(body.error).to.be.undefined;
+        done();
+      });
     });
   });
+
 
 });
