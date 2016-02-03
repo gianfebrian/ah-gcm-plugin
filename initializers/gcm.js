@@ -1,7 +1,6 @@
 var gcm = require('node-gcm'),
-  _ = require('lodash'),
-  Promise = require('bluebird');
-
+  _ = require('lodash');
+  
 module.exports = {
   loadPriority: 1000,
   startPriority: 1000,
