@@ -1,7 +1,11 @@
 {
   "name": "ah-gcm-plugin",
   "version": "0.0.1",
-  "description": "Actionhero GCM plugin. It also provides default action to cache registration token and queueing mechanism to deliver gcm payload.",
+  "description": "Actionhero plugin for GCM. It provides simple action to cache GCM's registrationId, and task to send GCM payload in queue immediately one after another.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gianfebrian/ah-gcm-plugin.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
