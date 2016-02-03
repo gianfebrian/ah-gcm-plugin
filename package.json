@@ -7,7 +7,7 @@
     "url": "git@github.com:gianfebrian/ah-gcm-plugin.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "ah-gcm-plugin"
@@ -18,5 +18,6 @@
     "async": "^1.5.2",
     "lodash": "^4.2.0",
     "node-gcm": "^0.14.0"
-  }
+  },
+  "devDependencies": {}
 }
