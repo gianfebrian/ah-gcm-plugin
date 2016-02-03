@@ -19,5 +19,9 @@
     "lodash": "^4.2.0",
     "node-gcm": "^0.14.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-factories": "^0.1.0",
+    "faker": "^3.0.1"
+  }
 }
