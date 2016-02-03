@@ -22,6 +22,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-factories": "^0.1.0",
-    "faker": "^3.0.1"
+    "faker": "^3.0.1",
+    "request": "^2.69.0"
   }
 }
