@@ -7,6 +7,7 @@ module.exports = {
   stopPriority: 1000,
   initialize: function(api, next) {
     var config = api.config.gcm;
+    api.gcm = {};
 
     // gcm instantiate. hide config from the rest of our codes.
     api.gcm.build = function() {
@@ -15,7 +16,7 @@ module.exports = {
 
     // gcm payload generation.
     api.gcm.generateMessageData = function(message) {
-      var gcmMessage = new.gcmMessage();
+      var gcmMessage = new gcmMessage();
       gcmMessage.addData(message)
       return gcmMessage;
     };
