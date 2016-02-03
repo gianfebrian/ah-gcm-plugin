@@ -67,5 +67,7 @@ module.exports = {
         api.gcm.token.register(options, callback);
       });
     };
+
+    next();
   }
 }
