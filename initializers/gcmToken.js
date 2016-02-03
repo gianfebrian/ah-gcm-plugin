@@ -20,17 +20,17 @@ module.exports = {
         err = '';
       _.each(mustExistKeys, function(n) {
         if (err) return;
-        if (_.isEmpty(options[n])) err = n + ' is empty';
+        if (_.isEmpty(options[n].toString())) err = n + ' is empty';
       });
-
+      
       return err || null;
     };
 
     api.gcm.token.register = function(options, callback) {
       var isEmpty = validateEmptyOptions(['registrationId', 'key'], options);
-      if (isEmpty) return isEmpty;
+      if (isEmpty) return callback(isEmpty);
 
-      api.cache.save(buildCacheKey(options.key), options.registrationId, null, callback)
+      api.cache.save(buildCacheKey(options.key), options.registrationId, null, callback);
     };
 
     api.gcm.token.findOne = function(key, callback) {
