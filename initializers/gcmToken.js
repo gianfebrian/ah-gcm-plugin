@@ -27,10 +27,10 @@ module.exports = {
     };
 
     api.gcm.token.register = function(options, callback) {
-      var isEmpty = validateEmptyOptions(['data', 'key'], options);
+      var isEmpty = validateEmptyOptions(['registrationId', 'key'], options);
       if (isEmpty) return isEmpty;
 
-      api.cache.save(buildCacheKey(key), data, null, callback)
+      api.cache.save(buildCacheKey(key), registrationId, null, callback)
     };
 
     api.gcm.token.findOne = function(key, callback) {
@@ -55,7 +55,7 @@ module.exports = {
     };
 
     api.gcm.token.findOneOrRegister = function(options, callback) {
-      var isEmpty = validateEmptyOptions(['data', 'key'], options);
+      var isEmpty = validateEmptyOptions(['registrationId', 'key'], options);
       if (isEmpty) return isEmpty;
 
       api.gcm.token.findOne(options.key, function(err, result) {
