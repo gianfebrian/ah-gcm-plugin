@@ -30,7 +30,7 @@ module.exports = {
       var isEmpty = validateEmptyOptions(['registrationId', 'key'], options);
       if (isEmpty) return isEmpty;
 
-      api.cache.save(buildCacheKey(key), registrationId, null, callback)
+      api.cache.save(buildCacheKey(options.key), options.registrationId, null, callback)
     };
 
     api.gcm.token.findOne = function(key, callback) {
@@ -59,8 +59,6 @@ module.exports = {
       if (isEmpty) return isEmpty;
 
       api.gcm.token.findOne(options.key, function(err, result) {
-        if (err)
-          return callback(err);
         if (result)
           return callback(null, result);
 
