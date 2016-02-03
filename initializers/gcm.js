@@ -16,7 +16,7 @@ module.exports = {
 
     // gcm payload generation.
     api.gcm.generateMessageData = function(message) {
-      var gcmMessage = new gcmMessage();
+      var gcmMessage = new gcm.Message();
       gcmMessage.addData(message)
       return gcmMessage;
     };
