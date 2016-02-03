@@ -1,8 +1,8 @@
 var chai = require('chai'),
   expect = chai.expect,
   factories = require('chai-factories'),
-  should = require("should"),
-  setup = require("./../_setup.js")._setup;
+  should = require('should'),
+  setup = require('./../_setup.js')._setup;
 
 describe('unit', function() {
   before(function(done) {

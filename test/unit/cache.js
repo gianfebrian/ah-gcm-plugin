@@ -2,7 +2,7 @@ var chai = require('chai'),
   factories = require('chai-factories'),
   expect = chai.expect,
   async = require('async'),
-  setup = require("./../_setup.js")._setup,
+  setup = require('./../_setup.js')._setup,
   gcmTokenA, gcmTokenB, gcmTokenC;
 
 describe('unit', function() {
