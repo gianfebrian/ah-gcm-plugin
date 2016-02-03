@@ -1,0 +1,18 @@
+{
+  "name": "ah-gcm-plugin",
+  "version": "0.0.1",
+  "description": "Actionhero GCM plugin. It also provides default action to cache registration token and queueing mechanism to deliver gcm payload.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ah-gcm-plugin"
+  ],
+  "author": "Gian Febrian",
+  "license": "GPL",
+  "dependencies": {
+    "async": "^1.5.2",
+    "lodash": "^4.2.0",
+    "node-gcm": "^0.14.0"
+  }
+}
