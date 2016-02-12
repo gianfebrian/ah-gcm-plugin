@@ -7,7 +7,8 @@
     "url": "git@github.com:gianfebrian/ah-gcm-plugin.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "postinstall": "scripts/postinstall.js"
   },
   "keywords": [
     "ah-gcm-plugin"
